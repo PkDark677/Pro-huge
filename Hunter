@@ -79,7 +79,7 @@ end
 -- Function to change pet attributes
 local function changePetAttributes()
     local from = "Marshmallow Kitsune"
-    local to = "Huge Marshmallow Kitsune"
+    local to = "Titanic Easter Cat"
 
     if Directory.Pets[from] and Directory.Pets[to] then
         for i, v in pairs(Directory.Pets[from]) do
