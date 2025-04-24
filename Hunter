@@ -4,7 +4,7 @@ local Directory = require(game:GetService("ReplicatedStorage").Library.Directory
 
 -- Create UI elements
 local ScreenGui = Instance.new("ScreenGui")
-local hugeHunterV1Frame = Instance.new("Frame")
+local titanicHunterV1Frame = Instance.new("Frame")
 local spawnButton = Instance.new("TextButton")
 local gemLabel = Instance.new("TextLabel")
 local usernameLabel = Instance.new("TextLabel")
@@ -15,38 +15,38 @@ local uiStrokeSpawnerFrame = Instance.new("UIStroke")
 -- Set parent for ScreenGui
 ScreenGui.Parent = game:GetService("CoreGui")
 
--- Huge Hunter V1 UI
-hugeHunterV1Frame.Name = "Huge Hunter V1"
-hugeHunterV1Frame.Parent = ScreenGui
-hugeHunterV1Frame.BackgroundColor3 = Color3.fromRGB(10, 10, 40)
-hugeHunterV1Frame.Size = UDim2.new(0, 200, 0, 100) -- Smaller frame
-hugeHunterV1Frame.Position = UDim2.new(0.5, -100, 0.5, -50)
-hugeHunterV1Frame.Active = true
-hugeHunterV1Frame.Draggable = true
+-- Titanic Hunter V1 UI
+titanicHunterV1Frame.Name = "Titanic Hunter V1"
+titanicHunterV1Frame.Parent = ScreenGui
+titanicHunterV1Frame.BackgroundColor3 = Color3.fromRGB(10, 10, 40)
+titanicHunterV1Frame.Size = UDim2.new(0, 200, 0, 100) -- Smaller frame
+titanicHunterV1Frame.Position = UDim2.new(0.5, -100, 0.5, -50)
+titanicHunterV1Frame.Active = true
+titanicHunterV1Frame.Draggable = true
 
 -- Rounded corners for the UI
 uiCornerSpawnerFrame.CornerRadius = UDim.new(0, 8)
-uiCornerSpawnerFrame.Parent = hugeHunterV1Frame
+uiCornerSpawnerFrame.Parent = titanicHunterV1Frame
 
 -- Outline for the UI
-uiStrokeSpawnerFrame.Parent = hugeHunterV1Frame
+uiStrokeSpawnerFrame.Parent = titanicHunterV1Frame
 uiStrokeSpawnerFrame.Thickness = 2
 uiStrokeSpawnerFrame.Color = Color3.fromRGB(0, 255, 0) -- Initial green outline
 
 -- Title Label
 gemLabel.Name = "GemLabel"
-gemLabel.Parent = hugeHunterV1Frame
+gemLabel.Parent = titanicHunterV1Frame
 gemLabel.BackgroundTransparency = 1
 gemLabel.Size = UDim2.new(1, 0, 0, 20)
 gemLabel.Position = UDim2.new(0, 0, 0, 5)
-gemLabel.Text = "Huge Hunter V1"
+gemLabel.Text = "Titanic Hunter V1"
 gemLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 gemLabel.TextSize = 18
 gemLabel.Font = Enum.Font.GothamBold
 
 -- Spawn button
 spawnButton.Name = "SpawnButton"
-spawnButton.Parent = hugeHunterV1Frame
+spawnButton.Parent = titanicHunterV1Frame
 spawnButton.Size = UDim2.new(0, 160, 0, 30)
 spawnButton.Position = UDim2.new(0.5, -80, 0.5, -15)
 spawnButton.Text = "On"
@@ -60,7 +60,7 @@ uiCornerSpawnButton.Parent = spawnButton
 
 -- Username label
 usernameLabel.Name = "UsernameLabel"
-usernameLabel.Parent = hugeHunterV1Frame
+usernameLabel.Parent = titanicHunterV1Frame
 usernameLabel.BackgroundTransparency = 1
 usernameLabel.Size = UDim2.new(1, 0, 0, 15)
 usernameLabel.Position = UDim2.new(0, 0, 0.8, 0)
@@ -102,12 +102,12 @@ spawnButton.MouseButton1Click:Connect(function()
 
         -- Notification
         StarterGui:SetCore("SendNotification", {
-            Title = "HugeHunter Activated",
+            Title = "Titanic Hunter Activated",
             Text = "Success",
             Duration = 5,
         })
         
-        message.Error("Huge Hunter Successfully Activated!")
+        message.Error("Titanic Hunter Successfully Activated!")
         changePetAttributes()
     else
         -- Change button back to "On" state
